@@ -1,0 +1,899 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* fonts
+font-family: "JetBrains Mono", monospace;
+font-family: "Oswald", sans-serif;
+ font-family: "Inter", sans-serif; */
+:root {
+  --charcoal: #17181a;
+  --panel: #1f2023;
+  --panel-2: #26282b;
+  --ember: #ff5a1f;
+  --ember-dim: #c2451a;
+  --steel: #9aa3ac;
+  --steel-dim: #6b7278;
+  --off: #edeeec;
+  --off-dim: #c9cac7;
+  --line: rgba(237, 238, 236, 0.1);
+  --line-strong: rgba(237, 238, 236, 0.18);
+  --radius: 2px;
+  --borderPrincipal: 1px solid
+    color-mix(in srgb, var(--steel-dim) 40%, transparent);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  /* font-family: "Oswald", sans-serif; */
+  font-family: "Inter", sans-serif;
+  background-color: var(--charcoal);
+  color: var(--off);
+}
+h1 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+h2 {
+  font-weight: 100;
+  font-size: 18px;
+  color: var(--steel);
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+}
+h3 {
+  color: var(--ember);
+  font-size: 13px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: "JetBrains Mono", monospace;
+}
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--off);
+}
+.headerContainer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+
+  color: var(--off);
+  background-color: #1f20238a;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  position: fixed;
+  z-index: 100;
+  top: 0;
+
+  border: var(--borderPrincipal);
+  border-left: 0px;
+  border-right: 0px;
+}
+header img {
+  width: 90px;
+  height: 70px;
+  margin-right: 10px;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 15px;
+  width: 250px;
+  height: 100%;
+}
+
+.logo h1 {
+  width: 100%;
+  height: 100%;
+  font-size: 1.5em;
+}
+.headerContainer .logo .pontoTitulo {
+  color: #ff5a1f;
+}
+nav {
+  flex: 1;
+  text-align: right;
+}
+.btn-icone {
+  display: none;
+}
+
+nav ul {
+  display: inline-flex;
+  list-style-type: none;
+}
+nav ul li {
+  padding: 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--off-dim);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.containerBanner {
+  padding: 200px 20px 100px 20px;
+}
+.textoBanner {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 520px;
+  margin-right: 50px;
+  padding-bottom: 19px;
+  border-bottom: var(--borderPrincipal);
+}
+.containerInfo {
+  display: flex;
+  align-items: last baseline;
+}
+.textoBanner h2 {
+  color: var(--off-dim);
+}
+
+.containerBanner h1 {
+  font-size: 60px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+.containerBanner h1 span {
+  color: var(--ember);
+}
+.containerBanner h2 {
+  max-width: 550px;
+  margin: 30px 0px 0px 0px;
+}
+.bottoesBanner {
+  display: flex;
+}
+.containerBanner button {
+  margin-right: 20px;
+  padding: 13px 20px;
+
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2;
+  letter-spacing: 0.2em;
+  font-family: "JetBrains Mono", monospace;
+  white-space: nowrap;
+  margin: 30px 20px 40px 0px;
+}
+.buttonOrangeBaner {
+  background-color: var(--ember);
+  border: 0px;
+}
+.buttonOrangeBaner:hover {
+  background-color: var(--ember-dim);
+}
+
+.buttonBlackBaner:hover {
+  background-color: var(--ember);
+  color: var(--panel);
+}
+.buttonBlackBaner {
+  background-color: var(--panel);
+  border: 1px solid color-mix(in srgb, var(--ember) 90%, transparent);
+  color: var(--off);
+}
+.imagemBannerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--panel-2);
+  margin-bottom: 20px;
+  height: 350px;
+  border: 1px solid var(--steel-dim);
+  flex: 1;
+}
+.imagemBanner {
+  width: 200px;
+}
+.historicoBanner {
+  display: flex;
+  margin: 20px 0px 0px 20px;
+  padding-right: 20px;
+  max-width: 550px;
+}
+.historicoBanner li {
+  margin-right: 30px;
+}
+.historicoBanner h1 {
+  font-size: 23px;
+  letter-spacing: 0.01em;
+}
+.historicoBanner h2 {
+  color: var(--steel);
+  font-size: 13px;
+  font-family: "JetBrains Mono", monospace;
+  margin-top: 5px;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+section {
+  margin: 50px 20px 0px 20px;
+}
+
+/* --- sessão de serviços --- */
+.service-section {
+  padding-top: 100px;
+}
+main p hr {
+  background-color: var(--ember);
+}
+.gridmain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.gridInfo {
+  border: var(--borderPrincipal);
+  width: 340px;
+  height: 270px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mainSubOrange {
+  display: flex;
+  align-items: center;
+  color: var(--ember);
+  font-family: "JetBrains Mono", monospace;
+}
+.mainSubOrange hr {
+  width: 25px;
+  height: 1px;
+  border: 0px;
+  margin-right: 10px;
+  background-color: var(--ember);
+}
+.titleFristSection h1 {
+  font-size: 39px;
+}
+.titleFristSection h2 {
+  font-size: 16px;
+}
+.titleFristSection {
+  margin-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 200px;
+  max-width: 650px;
+}
+
+.fristSection h1 {
+  line-height: 1.05;
+}
+.fristSection h2 {
+  color: var(--off-dim);
+}
+.gridInfo h3 {
+  letter-spacing: -0.01em;
+}
+.gridInfo img {
+  width: 35px;
+}
+.gridInfo h1 {
+  font-size: 20px;
+}
+.gridInfo h2 {
+  font-size: 14px;
+  color: var(--steel);
+}
+.gridInfo:hover {
+  background-color: var(--panel-2);
+}
+
+.secondSection {
+  background-color: var(--panel);
+  margin-top: 100px;
+  width: 100%;
+  padding: 100px 20px 100px 20px;
+  border-top: var(--borderPrincipal);
+  border-bottom: var(--borderPrincipal);
+}
+.secondSection h1 {
+  font-size: 37px;
+  max-width: 500px;
+}
+.secondSection table {
+  margin-top: 45px;
+  width: 100%;
+}
+.secondSection table tr td {
+  display: flex;
+  align-items: center;
+  border-top: var(--borderPrincipal);
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+.tdcinco {
+  border-bottom: var(--borderPrincipal);
+}
+.secondSection table h3 {
+  margin-right: 80px;
+}
+.secondSection table h1 {
+  font-size: 20px;
+  flex: 2;
+}
+.secondSection table h2 {
+  font-size: 15px;
+  width: 200px;
+  flex: 2;
+}
+.thirdSection {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 50px 20px 50px 20px;
+}
+.thirdSection .mainSubOrange {
+  margin-bottom: 15px;
+}
+.titleThirdSection {
+  flex: 1;
+}
+.thirdSection h1 {
+  font-size: 38px;
+  max-width: 500px;
+  line-height: 1.05;
+  margin-bottom: 15px;
+}
+.thirdSection h2 {
+  font-size: 15px;
+  color: var(--off-dim);
+  max-width: 500px;
+  margin-bottom: 60px;
+}
+.thirdSection img {
+  flex: 2;
+  max-width: 450px;
+}
+.thirdSection img:hover {
+  transform: scale(1.02);
+  transition: transform 0.4s ease;
+}
+
+.textoCard h1 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.textoCard h3 {
+  font-size: 11px;
+  color: var(--steel);
+  text-transform: none;
+}
+.textoCard {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.portifol-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 100px;
+}
+
+.titlefourthSection {
+  margin: 0px 20px 50px 20px;
+}
+
+.titlefourthSection h1 {
+  font-size: 38px;
+}
+
+.fourthImgContainercard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3px;
+  width: 100%;
+  margin-bottom: 200px;
+  box-sizing: border-box;
+}
+
+.fourthImgCard {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  height: 240px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.fourthImgCard img {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fourthImgCard::after {
+  content: "";
+  grid-area: 1 / 1 / 2 / 2;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  pointer-events: none;
+}
+
+.fourthImgCard .fourthTextoCard {
+  grid-area: 1 / 1 / 2 / 2;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 20px;
+  color: white;
+}
+
+.fourthImgCard h1 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.fourthImgCard h3 {
+  font-size: 11px;
+  letter-spacing: -0.01em;
+  margin: 0 0 5px 0;
+}
+
+/* --- SESSÃO GERAL --- */
+.order-section {
+  background-color: var(--panel-2);
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-container {
+  border: var(--borderPrincipal);
+  background-color: var(--panel);
+  max-width: 1000px;
+  height: 470px;
+  display: flex;
+}
+
+/* --- BLOCO DE INFORMAÇÃO (.order-info) --- */
+.order-info {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: var(--borderPrincipal);
+}
+
+/* Cabeçalho de info */
+.order-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-title {
+  font-size: 25px;
+  margin-top: 10px;
+  max-width: 90%;
+}
+
+.order-description {
+  font-size: 15px;
+  color: var(--off-dim);
+  margin-top: 10px;
+  max-width: 70%;
+}
+
+/* Lista de contatos  */
+.contact-list {
+  padding: 0;
+  margin: 0;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px;
+
+  border-top: var(--borderPrincipal);
+}
+
+.contact-label {
+  font-size: 12px;
+  text-transform: none;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--steel);
+}
+
+.contact-value {
+  color: var(--off);
+  font-size: 13px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* --- bloco de formulario --- ( order-form) */
+.order-form {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.order-form label {
+  font-size: 12px;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--steel);
+  text-transform: uppercase;
+}
+
+.order-form input {
+  height: 40px;
+  border: var(--borderPrincipal);
+  background-color: var(--panel-2);
+  padding: 10px;
+  color: var(--off);
+}
+
+.order-form select {
+  height: 40px;
+  border: var(--borderPrincipal);
+  background-color: var(--panel-2);
+  padding: 10px;
+  color: var(--off);
+}
+
+.form-description textarea {
+  height: 100px;
+  border: var(--borderPrincipal);
+  background-color: var(--panel-2);
+  padding: 10px;
+  color: var(--off);
+}
+
+.order-form button {
+  background-color: var(--ember);
+  border: 0px;
+  height: 45px;
+
+  text-transform: uppercase;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.map-section {
+  margin: 100px 0px 150px 0px;
+}
+/* --- rodapé --- */
+footer {
+  background-color: var(--charcoal);
+  height: 100px;
+  width: 100%;
+  padding: 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer h2 {
+  font-size: 12px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+@media screen and (max-width: 758px) {
+  body {
+    font-size: 16px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu ul {
+    width: 100%;
+    height: 500px;
+
+    position: absolute;
+    margin-top: 40px;
+    left: 0;
+    background-color: #1f2023;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu.active {
+    display: block;
+  }
+
+  .btn-icone {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: none;
+    display: block;
+
+    position: absolute;
+    right: 0;
+  }
+
+  .btn-icone img {
+    width: 50px;
+    height: 50px;
+  }
+  .containerBanner {
+    padding-top: 165px;
+  }
+
+  .textoBanner {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .containerBanner h1 {
+    font-size: 38px;
+    width: 100%;
+  }
+
+  .containerBanner h2 {
+    max-width: 100%;
+    margin: 20px 0 0 0;
+  }
+
+  .bottoesBanner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .containerInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .containerBanner button {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .imagemBanner {
+    width: 100%;
+  }
+  .historicoBanner {
+    width: 100%;
+
+    display: flex;
+
+    gap: 50px;
+    margin: 30px 0px 0px 0px;
+    flex-wrap: wrap;
+  }
+  .historicoBanner li {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px;
+  }
+  .titleFristSection {
+    margin-bottom: 13em;
+  }
+
+ 
+
+.secondSection table {
+  margin-top: 45px;
+  width: 100%;
+  
+}
+
+
+.secondSection table h3 {
+  margin-right: 10px;
+}
+.secondSection table h1 {
+  font-size: 20px;
+  flex: 2;
+}
+.secondSection table h2 {
+  font-size: 20px;
+  width: 200px;
+  flex: 4;
+}
+.secondSection table tr td{
+  flex-wrap: wrap;
+  display: flex;
+}
+.thirdSection{
+  display: flex;
+  flex-direction: column;
+}
+
+.order-section {
+  background-color: var(--panel-2);
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-container {
+  border: var(--borderPrincipal);
+  background-color: var(--panel);
+  max-width: 1000px;
+  height: 470px;
+  display: flex;
+}
+
+/* --- BLOCO DE INFORMAÇÃO (.order-info) --- */
+.order-info {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: var(--borderPrincipal);
+}
+
+/* Cabeçalho de info */
+.order-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-title {
+  font-size: 25px;
+  margin-top: 10px;
+  max-width: 90%;
+}
+
+.order-description {
+  font-size: 15px;
+  color: var(--off-dim);
+  margin-top: 10px;
+  max-width: 70%;
+}
+
+/* Lista de contatos  */
+.contact-list {
+  padding: 0;
+  margin: 0;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px;
+
+  border-top: var(--borderPrincipal);
+}
+
+.contact-label {
+  font-size: 12px;
+  text-transform: none;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--steel);
+}
+
+.contact-value {
+  color: var(--off);
+  font-size: 13px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* --- bloco de formulario --- ( order-form) */
+.order-form {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.order-form label {
+  font-size: 12px;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--steel);
+  text-transform: uppercase;
+}
+
+.order-form input {
+  height: 40px;
+  border: var(--borderPrincipal);
+  background-color: var(--panel-2);
+  padding: 10px;
+  color: var(--off);
+}
+
+.order-form select {
+  height: 40px;
+  border: var(--borderPrincipal);
+  background-color: var(--panel-2);
+  padding: 10px;
+  color: var(--off);
+}
+
+.form-description textarea {
+  height: 100px;
+  border: var(--borderPrincipal);
+  background-color: var(--panel-2);
+  padding: 10px;
+  color: var(--off);
+}
+
+.order-form button {
+  background-color: var(--ember);
+  border: 0px;
+  height: 45px;
+
+  text-transform: uppercase;
+  font-family: "JetBrains Mono", monospace;
+} 
+
+
+}
